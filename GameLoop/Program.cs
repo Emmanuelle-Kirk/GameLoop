@@ -21,7 +21,7 @@ namespace GameLoop
         }
         static void Exit()
         {
-            Console.SetCursorPosition(28, 116);
+            Console.SetCursorPosition(116, 28);
             Console.Write("O");
         }
         static void PlayerUpdate()
@@ -64,6 +64,10 @@ namespace GameLoop
             {
                 y = y - 1;
             }
+           if (x == 116 && y == 28)
+            {
+                gameOver = true;
+            }
         }
         static void Main(string[] args)
         {
@@ -73,6 +77,7 @@ namespace GameLoop
                 PlayerUpdate();
                 PlayerDraw();
             }
+            Console.WriteLine();
             Console.WriteLine("GAME OVER");
             Console.ReadKey(true);
         }
