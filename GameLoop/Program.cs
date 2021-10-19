@@ -17,7 +17,7 @@ namespace GameLoop
         {
             Console.Clear();
             Console.SetCursorPosition(x, y);
-            Console.Write("p");
+            Console.Write(".");
         }
         static void PlayerUpdate()
         {
@@ -25,7 +25,7 @@ namespace GameLoop
             char input = readKeyInput.KeyChar; //extracting char
             if (input == 'w')
             {
-                y = y + 1;
+                y = y - 1;
                 //Console.WriteLine("y = " + y);
             }
             if (input == 'a')
@@ -35,7 +35,7 @@ namespace GameLoop
             }
             if (input == 's')
             {
-                y = y - 1;
+                y = y + 1;
                 //Console.WriteLine("y = " + y);
             }
             if (input == 'd')
@@ -50,6 +50,14 @@ namespace GameLoop
             if (y <= -1)
             {
                 y = y + 1;
+            }
+            if (x >= 117)
+            {
+                x = x - 1;
+            }
+           if (y >= 29)
+            {
+                y = y - 1;
             }
         }
         static void Main(string[] args)
