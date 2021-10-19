@@ -8,6 +8,9 @@ namespace GameLoop
 {
     class Program
     {
+        static bool gameOver;
+        static int x;
+        static int y;
         static void Main(string[] args)
         {
             Console.WriteLine("Game Loop");
