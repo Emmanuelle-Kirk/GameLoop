@@ -22,19 +22,23 @@ namespace GameLoop
 
                 if (input == 'w')
                 {
-                    Console.WriteLine("UP");
+                    y = y + 1;
+                    Console.WriteLine(y);
                 }
                 if (input == 'a')
                 {
-                    Console.WriteLine("LEFT");
+                    x = x - 1;
+                    Console.WriteLine(x);
                 }
                 if (input == 's')
                 {
-                    Console.WriteLine("DOWN");
+                    y = y - 1;
+                    Console.WriteLine(y);
                 }
                 if (input == 'd')
                 {
-                    Console.WriteLine("RIGHT");
+                    x = x + 1;
+                    Console.WriteLine(x);
                 }
 
             }
