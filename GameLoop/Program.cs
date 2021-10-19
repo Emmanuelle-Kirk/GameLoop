@@ -19,6 +19,11 @@ namespace GameLoop
             Console.SetCursorPosition(x, y);
             Console.Write(".");
         }
+        static void Exit()
+        {
+            Console.SetCursorPosition(28, 116);
+            Console.Write("O");
+        }
         static void PlayerUpdate()
         {
             ConsoleKeyInfo readKeyInput = Console.ReadKey(true); //ReadKey stored
@@ -64,6 +69,7 @@ namespace GameLoop
         {
             while (gameOver == false)
             {
+                Exit();
                 PlayerUpdate();
                 PlayerDraw();
             }
